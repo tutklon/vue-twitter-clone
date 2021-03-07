@@ -1,6 +1,11 @@
 <script>
 export default {
-    name: 'LoginForm'
+    name: 'LoginForm',
+    methods: {
+        async openPopup(){
+            await this.$emit("openPopup" , true)
+        }
+    }
 }
 </script>
 
@@ -13,7 +18,7 @@ export default {
         <input type="text" placeholder="Phone, e-mail or username">
         <input type="text" placeholder="Password">
         <button>Sign In</button>
-        <button>Sign Up</button>
+        <button @click.prevent="openPopup()" class="sgn-up">Sign Up</button>
     </form>
 </template>
 
@@ -38,7 +43,7 @@ input {
     font-size: 15px;
     margin-bottom: 20px;
     &:focus {
-        border: 2px solid  rgb(29, 161, 242);
+        border: 1px solid  rgb(29, 161, 242);
     }
 }
 button {
@@ -50,11 +55,16 @@ button {
     background:rgb(29, 161, 242);
     color: white;
     cursor: pointer;
+    outline: none;
     transition: 250ms all;
     &:last-child {
-        background: transparent;
+        background: #15202b;
         color: rgb(29, 161, 242);
     }
+
+}
+.sgn-up:hover {
+     background-color: rgba(#15202b , 0.5);
 }
 svg {
     fill: #fff;
