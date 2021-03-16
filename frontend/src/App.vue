@@ -20,7 +20,7 @@
   height: 100vh;
   background: #15202b;
   color: white;
-  a {
+  .link {
     color: white;
   }
 }
