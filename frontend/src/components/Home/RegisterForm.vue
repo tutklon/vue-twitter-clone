@@ -1,5 +1,5 @@
 <script>
-import Exit from './icons/exit.vue'
+import Exit from '../icons/exit.vue'
 export default {
     name: 'LoginForm',
     components: {

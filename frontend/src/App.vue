@@ -5,6 +5,7 @@
 </template>
 
 <style lang="scss">
+$border: #A5D432;
 *  , *::before , *::after {
   margin: 0;
   padding: 0;
