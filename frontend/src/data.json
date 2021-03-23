@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "url": "https://pbs.twimg.com/profile_images/1351199776877010950/-NWmnV9a_400x400.jpg",
+            "verified": true,
+            "username": "tutklon",
+            "fullname": "Tutku Ucan",
+            "tweet": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum dignissimos nam expedita deleniti! At voluptatem sapiente porro tempora cum non ratione itaque saepe dolorem quidem, aut impedit, unde odio dolor.Soluta, accusantium ad eveniet et corporis ipsum aut optio ullam nam sint iusto quam hic repellat assumenda libero ratione explicabo natus fugiat consequatur exercitationem incidunt, commodi esse. Excepturi, accusamus amet?"
+        },
+        {
+            "url": "https://pbs.twimg.com/profile_images/1090671388409716737/lH80sB4Q_400x400.jpg",
+            "verified": false,
+            "username": "lvntblm91",
+            "fullname": "Levent Balım",
+            "tweet": "Dolar yükseliyor demek yanlış algıya sebep oluyor. Arkadaşlar TÜRK LİRASI DELİ GİBİ DEĞER KAYBEDİYOR YILLARDIR. ÜLKEMİZİN RESMİ PARA BİRİMİ DEĞERSİZLEŞİYOR. bu ne dış güçlerin ne iç güçlerin suçu bu bu ülkeyi yönetemeyenlerin suçudur. NET NOKTA BİTTİ."
+        },
+        {
+            "url": "https://pbs.twimg.com/profile_images/1372850770106847233/r2mELEx9_400x400.jpg",
+            "verified": false,
+            "username": "fkadev",
+            "fullname": "fatih kadir akın",
+            "tweet": "'Dolar kuru, fazla uzaklaşmış olamaz' - fka"
+        }
+    ]
+}

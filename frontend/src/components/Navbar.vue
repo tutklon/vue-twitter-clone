@@ -1,8 +1,9 @@
 <script>
+import icon from './icons/icon'
 export default {
     name: 'Navbar',
     components: {
-        
+        icon
     },
     data(){
         return {
@@ -72,7 +73,7 @@ export default {
             <li>
                 <router-link to="/">
                     <svg id="tweet" viewBox="0 0 24 24" class="r-jwli3a r-4qtqp9 r-yyyyoo r-1q142lx r-50lct3 r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-1srniue"><g><path d="M8.8 7.2H5.6V3.9c0-.4-.3-.8-.8-.8s-.7.4-.7.8v3.3H.8c-.4 0-.8.3-.8.8s.3.8.8.8h3.3v3.3c0 .4.3.8.8.8s.8-.3.8-.8V8.7H9c.4 0 .8-.3.8-.8s-.5-.7-1-.7zm15-4.9v-.1h-.1c-.1 0-9.2 1.2-14.4 11.7-3.8 7.6-3.6 9.9-3.3 9.9.3.1 3.4-6.5 6.7-9.2 5.2-1.1 6.6-3.6 6.6-3.6s-1.5.2-2.1.2c-.8 0-1.4-.2-1.7-.3 1.3-1.2 2.4-1.5 3.5-1.7.9-.2 1.8-.4 3-1.2 2.2-1.6 1.9-5.5 1.8-5.7z"></path></g></svg>
-                    <p>Tweet</p>
+                    <p class="tweet">Tweet</p>
                 </router-link>
             </li>
         </ul>
@@ -80,6 +81,13 @@ export default {
             <li>
                 <a class="avatar-link">
                     <img class="avatar" :src="img" alt="">
+                    <div>
+                        <div style="display: flex;">
+                            <p>tutku</p>
+                            <icon class="icon" name="verified" width="18" height="18" />
+                        </div>
+                        <p>@tutklon</p>
+                    </div>
                 </a>
             </li>
         </ul>
@@ -100,6 +108,9 @@ svg {
     height: 49px;
     fill: white;
     padding: 10px;
+}
+.icon {
+    display: none;
 }
 ul {
     .bird {
@@ -142,13 +153,35 @@ ul {
             p {
                 margin-left: 10px;
                 color: white;
-                font-size: 1.5em;
+                font-size: 1.3em;
                 display: none;
+                transition: 250ms all;
+                font-weight: bold;
+            }
+            .tweet {
+                font-size: 1em;
             }
         }
     }
 }
 .avatar-link {
+    display: flex !important;
+    align-items: center;
+    div {
+        p {
+            &:first-child {
+                font-weight: bold;
+                margin-left: 15px;
+            }
+            &:last-child {
+                font-size: 15px;
+                margin-left: 15px;
+                color: rgb(136, 153, 166);
+            }
+            font-size: 15px;
+            margin-left: 10px;
+        }
+    }
     cursor: pointer;
     padding: 10px;
     background: $c-background !important; 
@@ -165,11 +198,58 @@ ul {
     }
 }
 @media screen and (min-width: 1300px){
-    p {
-        display: flex;
+    ul {
+        li {
+            &:first-child {
+                a {
+                    display: block;
+                    svg#bird {
+                        display: block;
+                    }
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                border-radius: 60px;
+                padding-left: 5px;
+                padding-right: 30px;
+                p {
+                    display: block;
+                }
+                &:hover {
+                    p {
+                        color: $c-text-blue;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    padding: 10px;
+                    svg#tweet {
+                        display: none;
+                    }
+                    p {
+                        margin: 0 auto;
+                    }
+                    &:hover {
+                        p {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
     }
     .navbar {
-        grid-column: 1 / 3;
+        grid-column: 3 / 5;
+        margin-right: 100px;
+    }
+    .avatar-link {
+        width: 15%;
+    }
+    .icon {
+        display: block;
     }
 }
 </style>
