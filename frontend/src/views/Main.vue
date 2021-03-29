@@ -2,15 +2,19 @@
 import axios from 'axios'
 import Navbar from '../components/Navbar'
 import Tweet from '../components/Tweet'
+import MainHeader from '../components/Main/MainHeader'
+import TweetForm from '../components/Main/TweetForm'
 export default {
   name: 'Main',
   components: {
     Navbar,
-    Tweet
+    Tweet,
+    MainHeader,
+    TweetForm
   },
   data(){
     return {
-      users: [] 
+      users: []
     }
   },
   beforeCreate(){
@@ -25,7 +29,8 @@ export default {
   <div class="main">
     <Navbar />
     <div class="content">
-      <br>
+      <MainHeader />
+      <TweetForm />
       <Tweet />
     </div>
     <div class="search">

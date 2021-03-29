@@ -108,7 +108,7 @@ main {
         width: 100%;
         display: flex;
         justify-content: space-around;
-        margin-top: -4px;
+        margin: -4px 0px -5px 0px;
         button {
             border: none;
             background: transparent;
@@ -127,7 +127,7 @@ main {
             .retweet {
                 &:hover {
                     background: rgba(23, 191, 99, 0.1);;
-                    fill: rgb(23, 191, 99)
+                    fill: rgb(23, 191, 99);
                 }
             }
             .like {

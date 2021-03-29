@@ -82,7 +82,7 @@ export default {
                 <a class="avatar-link">
                     <img class="avatar" :src="img" alt="">
                     <div>
-                        <div style="display: flex;">
+                        <div>
                             <p>tutku</p>
                             <icon class="icon" name="verified" width="18" height="18" />
                         </div>
@@ -108,9 +108,6 @@ svg {
     height: 49px;
     fill: white;
     padding: 10px;
-}
-.icon {
-    display: none;
 }
 ul {
     .bird {
@@ -164,10 +161,18 @@ ul {
         }
     }
 }
+.icon {
+    display: none !important;
+    margin: 2px 3px 0px 0px;
+    fill: $c-text-blue;
+}
 .avatar-link {
     display: flex !important;
     align-items: center;
     div {
+        div {
+            display: flex;
+        }
         p {
             &:first-child {
                 font-weight: bold;
@@ -198,6 +203,9 @@ ul {
     }
 }
 @media screen and (min-width: 1300px){
+    .icon {
+        display: block !important;
+    }
     ul {
         li {
             &:first-child {
