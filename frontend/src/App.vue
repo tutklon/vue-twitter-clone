@@ -1,11 +1,10 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-$border: #A5D432;
 *  , *::before , *::after {
   margin: 0;
   padding: 0;
@@ -23,6 +22,9 @@ $border: #A5D432;
   color: white;
   .link {
     color: white;
+  }
+  button {
+    outline: none;
   }
 }
 </style>

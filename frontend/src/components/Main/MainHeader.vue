@@ -18,12 +18,16 @@ export default {
 @import '../../assets/scss/veriables.scss';
 
 header {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-top: 50px;
     grid-column: 3 / 11;
     border-bottom: 1px solid $c-tweet-border;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    background: $c-background;
     div {
         padding: 5px 8px;
         border-radius: 50%;

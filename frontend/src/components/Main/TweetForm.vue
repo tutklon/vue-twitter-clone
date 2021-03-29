@@ -38,6 +38,7 @@ export default {
             </div>
             <button>Tweet</button>
         </footer>
+        <div class="bottom-line"></div>
     </section>
 </template>
 
@@ -112,5 +113,8 @@ img {
     &:hover {
         background: $c-hover;
     }
+}
+.bottom-line {
+    
 }
 </style>

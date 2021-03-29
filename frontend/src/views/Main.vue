@@ -4,13 +4,17 @@ import Navbar from '../components/Navbar'
 import Tweet from '../components/Tweet'
 import MainHeader from '../components/Main/MainHeader'
 import TweetForm from '../components/Main/TweetForm'
+import SearchBar from '../components/SearchBar'
+import Trends from '../components/Trends'
 export default {
   name: 'Main',
   components: {
     Navbar,
     Tweet,
     MainHeader,
-    TweetForm
+    TweetForm,
+    SearchBar,
+    Trends
   },
   data(){
     return {
@@ -34,7 +38,9 @@ export default {
       <Tweet />
     </div>
     <div class="search">
-
+      <SearchBar />
+      <Trends component_name="trends" />
+      <Trends />
     </div>
   </div>
 </template>
@@ -61,7 +67,7 @@ export default {
 }
 .search {
   height: 100vh;
-  width: 100%;
+  width: 88%;
   //background: green;
   grid-area: search;
   grid-column: 11 / 16;

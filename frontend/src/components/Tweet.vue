@@ -73,12 +73,13 @@ main {
         background: rgb(28, 39, 50);
     }
     header {
-        grid-column: 1 / 2; 
+        grid-column: 1 / 2;
         grid-area: header;
         img {
             width: 48px;
             object-fit: cover;
             border-radius: 50%;
+            transition: 250ms all;
         }
     }
     section {
