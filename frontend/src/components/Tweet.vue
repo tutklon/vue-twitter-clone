@@ -79,7 +79,10 @@ main {
             width: 48px;
             object-fit: cover;
             border-radius: 50%;
-            transition: 250ms all;
+            transition: 300ms all;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
     section {
@@ -91,6 +94,9 @@ main {
                 font-weight: bolder;
                 margin-right: 3px;
                 color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             span {
                 padding: 0 5px;

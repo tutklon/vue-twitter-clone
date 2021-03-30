@@ -18,13 +18,13 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <div class="avatar">
             <img :src="url" />
         </div>
         <div class="content">
             <div>
-                <p>{{fullname}}</p>
+                <router-link to="#">{{fullname}}</router-link>
                 <icon class="verified" v-if="verified == true" name="verified" width="18" />
             </div>
             <span>{{username}}</span>
@@ -38,13 +38,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/veriables.scss';
-div {
+.container {
     width: 100%;
     display: grid;
-    grid-template-columns: 50px auto 30px;
-    grid-template-rows: 1fr;
+    grid-template-columns: 50px auto 80px;
+    grid-template-rows: 50px;
     grid-template-areas: "avatar" "content" "follow";
-    padding: 0 15px;
+    padding: 10px 15px;
     border-bottom: 1px solid $c-tweet-border;
     cursor: pointer;
     background: transparent;
@@ -62,6 +62,10 @@ div {
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 5px;
+            transition: 300ms all;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
     .content {
@@ -71,12 +75,17 @@ div {
         margin-left: 10px;
         display: flex;
         flex-direction: column;
+        margin-top: 5px;
         div {
             display: flex;
-            p {
+            a {
                 margin-right: 4px;
                 font-weight: bolder;
                 font-size: 15px;
+                color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             .verified {
                 fill: $c-text-blue;
